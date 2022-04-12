@@ -55,7 +55,7 @@ jobs:
         uses: actions/checkout@v2
         with:
           ###### EDIT HERE ######
-          repository: maverik0071/iso-profiles
+          repository: Maverik0071/iso-profiles
           #######################
           token: "${{ secrets.GITHUB_TOKEN }}"
           path: 'iso-profiles'
