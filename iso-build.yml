@@ -28,13 +28,13 @@ jobs:
     needs: [prepare-release]
     strategy:
       matrix:
-        edition: [sway]
-        branch: [stable]
+        edition: [xfce]
+        branch: [stable, unstable]
         scope: [full, minimal]
         kernel: 
           - ${{ needs.prepare-release.outputs.longterm }}
         include:
-          - edition: sway
+          - edition: xfce
             branch: unstable
             scope: full
             kernel: ${{ needs.prepare-release.outputs.stable }}
