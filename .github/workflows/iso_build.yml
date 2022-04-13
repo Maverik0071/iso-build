@@ -49,7 +49,7 @@ jobs:
       - name: image-build-upload
         uses: Manjaro/manjaro-iso-action@v2.6
         with:
-          iso-profiles-repo: https://gitlab.manjaro.org/profiles-and-settings/iso-profiles/-/tree/master/manjaro/xfce
+          iso-profiles-repo: https://gitlab.manjaro.org/profiles-and-settings/iso-profiles/
           edition: ${{ matrix.edition }}
           branch: ${{ matrix.branch }}
           scope: ${{ matrix.scope }}
