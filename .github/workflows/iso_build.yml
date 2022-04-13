@@ -30,13 +30,13 @@ jobs:
       matrix:
         edition: [xfce]
         branch: [stable]
-        scope: [full]
+        scope: [minimal]
         kernel: 
           - ${{ needs.prepare-release.outputs.longterm }}
         include:
           - edition: xfce
             branch: stable
-            scope: full
+            scope: minimal
             kernel: ${{ needs.prepare-release.outputs.stable }}
             experimental: true
     steps:
@@ -44,7 +44,7 @@ jobs:
         with:
           access_token: ${{ github.token }}
       - name: import xfce key
-        run: |
+        run: 
           gpg --keyserver keys.openpgp.org --receive-keys ${{ secrets.GPG_KEYID }}
       - name: image-build-upload
         uses: Manjaro/manjaro-iso-action@v2.6
